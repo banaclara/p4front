@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <a href="#" class="navigation active" id="login">Login</a>
+        <a href="#" class="navigation" id="register">Register</a>
+      </nav>
+      <form action="" class="login-form">
+        <div class="input-box">
+          <input type="text" name="username" class="username" required /><label
+            >Username</label
+          >
+          <span class="icon"><i class="ti ti-user"></i></span>
+        </div>
+        <div class="input-box input-password">
+          <input
+            type="password"
+            name="password"
+            class="password"
+            required
+          /><label>Password</label>
+          <span class="icon"><i class="ti ti-eye-closed eye-icon"></i></span>
+        </div>
+        <div class="sub-links">
+          <div class="check">
+            <input type="checkbox" id="remember" /><label for="remember"
+              >Remember me</label
+            >
+          </div>
+          <a href="#">Forgot password</a>
+        </div>
+        <input type="submit" class="main-btn" value="Login" />
+      </form>
+
+      <form action="" class="register-form">
+        <div class="input-box">
+          <input type="text" name="username" class="username" required /><label
+            >Username</label
+          >
+          <span class="icon"><i class="ti ti-user"></i></span>
+        </div>
+        <div class="input-box input-password">
+          <input
+            type="password"
+            name="password"
+            class="password"
+            required
+          /><label>Password</label>
+          <span class="icon"><i class="ti ti-eye-closed eye-icon"></i></span>
+        </div>
+        <div class="input-box input-password">
+          <input
+            type="password"
+            name="confirm-password"
+            class="password"
+            required
+          /><label>Confirm password</label>
+          <span class="icon"><i class="ti ti-eye-closed eye-icon"></i></span>
+        </div>
+        <input type="submit" class="main-btn" value="Register" />
+      </form>
+      <div class="socials">
+        <p>or continue with</p>
+        <div class="icons">
+          <span class="icon"><i class="ti ti-brand-google"></i></span>
+          <span class="icon"><i class="ti ti-brand-facebook"></i></span>
+          <span class="icon"><i class="ti ti-brand-twitter"></i></span>
+          <span class="icon"><i class="ti ti-brand-linkedin"></i></span>
+        </div>
+      </div>
+    </div>
+    <div class="logged-message"></div>
+
+    <script src="assets/script.js"></script>
+  </body>
+</html>

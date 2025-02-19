@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+  --main-black: rgb(27, 32, 33);
+  --main-white: rgb(253, 252, 252);
+  --light-gray: rgb(214, 214, 214);
+  --dark-gray: rgb(125, 125, 125);
+  --light-blue: rgb(141, 157, 202);
+  --lighter-blue: rgb(205, 212, 235);
+  --dark-blue: rgb(59, 83, 178);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Mulish, sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('bg-12.svg');
+  background-size: cover;
+}
+
+.container {
+  width: 400px;
+  height: 460px;
+  padding: 1.5em 0.5em;
+  border: 1px solid var(--light-gray);
+  border-radius: 1em;
+  box-shadow: 2px 2px 12px 2px var(--light-blue);
+  transition: all ease 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.register-form {
+  display: none;
+}
+
+.logged-message {
+  display: none;
+  padding: 2em;
+  font-weight: 700;
+  background-color: var(--lighter-blue);
+  color: var(--dark-blue);
+  border-radius: 1em;
+  box-shadow: 2px 2px 12px 2px var(--light-blue);
+}
+
+.container nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.container nav a {
+  position: relative;
+  width: 100%;
+  font-size: 0.9em;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--light-gray);
+  transition: all ease 0.3s;
+}
+
+.container nav .active {
+  color: var(--main-black);
+}
+
+.container nav a:hover {
+  color: var(--dark-gray);
+}
+
+.container nav a::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: -1.25em;
+  width: 100%;
+  background: var(--light-gray);
+  transition: all ease 0.3s;
+}
+
+.container nav .active::after {
+  background: var(--light-blue);
+}
+
+.container nav a:hover:after {
+  width: 80%;
+  background: var(--dark-gray);
+}
+
+.container form {
+  padding: 1.25em 2em;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  margin: 1.5em 0;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.input-box label {
+  position: absolute;
+  left: 0.5em;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--dark-gray);
+  font-weight: 700;
+  font-size: 0.65em;
+  text-transform: uppercase;
+  pointer-events: none;
+  transition: all ease 0.4s;
+}
+
+.input-box input {
+  padding: 0.75em;
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 0.5em;
+  font-size: 1.1em;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--dark-gray);
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -0.35em;
+}
+
+.sub-links {
+  font-size: 0.75em;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sub-links .check {
+  display: flex;
+  justify-content: center;
+  gap: 0.3em;
+  accent-color: var(--main-black);
+}
+
+.sub-links a {
+  color: var(--dark-blue);
+  text-decoration: none;
+  transition: all ease 0.2s;
+}
+
+.sub-links a:hover {
+  color: var(--light-blue);
+}
+
+.main-btn {
+  width: 100%;
+  background-color: var(--dark-blue);
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.75em;
+  margin-top: 2em;
+  transition: all ease 0.3s;
+  color: var(--main-white);
+  text-transform: uppercase;
+  font-size: 0.75em;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.main-btn:hover {
+  background-color: var(--light-blue);
+  color: var(--main-black);
+}
+
+.register {
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.9em;
+}
+
+.register a {
+  text-decoration: none;
+  color: var(--dark-blue);
+  transition: all ease 0.2s;
+}
+
+.register a:hover {
+  color: var(--light-blue);
+}
+
+.socials {
+  text-align: center;
+  font-size: 0.8em;
+  margin: 0 4.5em;
+}
+
+.socials .icons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 0.5em;
+}
+
+.socials .icon {
+  font-size: 1.75em;
+  cursor: pointer;
+}
