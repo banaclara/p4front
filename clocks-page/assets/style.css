@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbit&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.95);
+}
+
+.clocks-container {
+  display: flex;
+}
+
+.clock {
+  cursor: default;
+  margin: 2rem;
+  padding: 0.75rem;
+  font-family: 'Orbit';
+  font-size: 3rem;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    rgb(20, 255, 255),
+    rgb(255, 255, 60),
+    rgb(255, 0, 225)
+  );
+  animation: animate 2s linear infinite;
+  border-radius: 1rem;
+  transition: ease 0.4s;
+}
+
+.clock:hover {
+  transform: scale(1.1);
+}
+
+.clock .timezone {
+  font-size: 1.25rem;
+  padding: 0.25rem 0;
+}
+
+.clock .time {
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.95);
+  color: rgb(248, 248, 248);
+  border-radius: 1rem;
+}
+
+@keyframes animate {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
