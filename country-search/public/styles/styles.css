@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg: rgb(222, 179, 179);
+  --whites: rgb(255, 249, 249);
+  --text: rgb(25, 25, 25);
+  --accents: rgb(80, 14, 14);
+  --grays: rgb(141, 141, 141);
+  --lightgray: rgb(190, 190, 190);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Lato';
+  background-color: var(--bg);
+  color: var(--text);
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--accents);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--whites);
+}
+
+aside {
+  width: 100%;
+  min-height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+aside h1 {
+  color: var(--accents);
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  padding: 6rem 0 1rem;
+  background-color: var(--whites);
+  border-radius: 1rem 0 0 0;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+form {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+form input {
+  padding: 0.5em;
+  font-size: large;
+  border-radius: 0.75em;
+  border: 1px solid var(--grays);
+  outline: none;
+  width: 80%;
+}
+
+form button {
+  background-color: var(--accents);
+  color: var(--whites);
+  padding: 0.5em;
+  font-size: large;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: ease 0.3s;
+  width: 40px;
+}
+
+form button:hover {
+  background-color: var(--bg);
+}
+
+#result {
+  width: 80%;
+}
+
+#result img {
+  margin-top: 0.5em;
+  width: 60%;
+}
+
+#result h2 {
+  margin-bottom: 0.25em;
+}
+
+#result .country-card {
+  margin: 1em 0;
+  padding: 1em;
+  border-radius: 0.75em;
+  box-shadow: 0 0 10px var(--lightgray);
+  text-align: center;
+  line-height: 1.5em;
+}
